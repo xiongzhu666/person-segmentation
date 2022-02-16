@@ -33,7 +33,7 @@ def run_inference(onnx_session, input_size, image):
 
     return onnx_result
 
-image = cv.imread("eval/233129.jpg")
+image = cv.imread("eval/test1.jpg")
 
 while(image.shape[0] >= 768 and image.shape[1] >= 768):
     image = cv.pyrDown(image)
