@@ -12,7 +12,7 @@ int main(int argc, char** argv)
     skynet.opt.use_vulkan_compute = true;
     skynet.load_param("../person_u2netp_sim-opt-fp16.param");
     skynet.load_model("../person_u2netp_sim-opt-fp16.bin");
-    cv::Mat bgr = cv::imread("../eval/1.jpg", 1);
+    cv::Mat bgr = cv::imread("../eval/test1.jpg", 1);
     cv::Mat dst = bgr.clone();
     while (dst.rows > 768 && dst.cols >768 ) {
         pyrDown(dst, dst, cv::Size(dst.cols / 2, dst.rows / 2));
