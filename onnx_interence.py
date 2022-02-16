@@ -37,8 +37,8 @@ image = cv.imread("eval/233129.jpg")
 
 while(image.shape[0] >= 640 and image.shape[1] >= 640):
     image = cv.pyrDown(image)
-onnx_session = onnxruntime.InferenceSession("skyseg_20210725.onnx")
-result_map = run_inference(onnx_session,[320,320],image)
+onnx_session = onnxruntime.InferenceSession("person-u2netp.onnx")
+result_map = run_inference(onnx_session,[384,384],image)
 
 cv.namedWindow("U-2-Net Result", 0)
 cv.imshow('U-2-Net Result', result_map)
