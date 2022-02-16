@@ -35,7 +35,7 @@ def run_inference(onnx_session, input_size, image):
 
 image = cv.imread("eval/233129.jpg")
 
-while(image.shape[0] >= 640 and image.shape[1] >= 640):
+while(image.shape[0] >= 768 and image.shape[1] >= 768):
     image = cv.pyrDown(image)
 onnx_session = onnxruntime.InferenceSession("person-u2netp.onnx")
 result_map = run_inference(onnx_session,[384,384],image)
